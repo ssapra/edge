@@ -4,4 +4,3 @@ class EventsController < ApplicationController
     @events = @track.events
   end
 end
-

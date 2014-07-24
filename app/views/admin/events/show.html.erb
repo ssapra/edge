@@ -1,0 +1,12 @@
+<div id="headerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h1><%= @event.title %></h1>
+
+        <%= link_to "Edit Event", edit_admin_event_path(id: @event.id) %>
+        <%= link_to "All Events", admin_events_path %>
+      </div>
+    </div>
+  </div>
+</div>

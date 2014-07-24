@@ -21,6 +21,18 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'quiet_assets'
+  gem 'debugger'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'guard-livereload', :require => false
+  gem 'meta_request', '~> 0.3.0'
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'factory_girl_rails', '~> 4.2.1'
+  gem 'shoulda-matchers', '~> 2.6.1'
+end
+
 gem 'heroku'
 gem 'pg'
 

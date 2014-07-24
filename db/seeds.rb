@@ -1,3 +1,6 @@
+Organization.destroy_all
+Track.destroy_all
+
 o = Organization.create name: 'Edge UChicago'
 Track.create name: 'General', organization_id: o.id
 Track.create name: 'Labs', organization_id: o.id
