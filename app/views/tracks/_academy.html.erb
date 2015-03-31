@@ -8,7 +8,7 @@
   <p><strong>Description:</strong><%= course.description %></p>
   <p><strong>Details:</strong><%= course.details %></p>
   <p><strong>Instructor:</strong><%= course.instructor %></p>
-  <p><strong>Application:</strong><% course.enrollment_open ? course.application_link : 'Closed' %></p>
+  <p><strong>Application:</strong><%= course.enrollment_open ? course.application_link : "Closed" %></p>
   <p><strong>Classroom Links:</strong>
     <% course.course_links.map do |link| %>
       <%= link_to link.text, link.link %>
