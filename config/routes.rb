@@ -2,6 +2,8 @@ Edge::Application.routes.draw do
 
   root to: 'pages#home'
 
+  get '/auth' => 'auth#login'
+
   namespace :admin do
     resources :events
   end

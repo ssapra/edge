@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.1.5'
 
 gem 'rails', '4.0.2'
 
@@ -17,13 +17,15 @@ gem 'turbolinks'
 
 gem 'jbuilder', '~> 1.2'
 
+gem 'pry'
+
 group :doc do
   gem 'sdoc', require: false
 end
 
 group :development, :test do
   gem 'quiet_assets'
-  gem 'debugger'
+  gem 'byebug'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'guard-livereload', :require => false
