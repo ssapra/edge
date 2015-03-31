@@ -10,8 +10,10 @@
   <p><strong>Instructor:</strong><%= course.instructor %></p>
   <p><strong>Application:</strong><%= course.enrollment_open ? course.application_link : "Closed" %></p>
   <p><strong>Classroom Links:</strong>
-    <% course.course_links.map do |link| %>
+    <% length = course.course_links.size %>
+    <% course.course_links.each_with_index do |link, index| %>
       <%= link_to link.text, link.link %>
+      <%= "|" if index != length -1 %>
     <% end %>
   </p>
 <% end %>
