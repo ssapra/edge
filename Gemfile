@@ -19,6 +19,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'pry'
 
+gem 'simple_form', '>= 3.0.0.rc'
+
 group :doc do
   gem 'sdoc', require: false
 end

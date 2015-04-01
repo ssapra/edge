@@ -56,6 +56,9 @@ ActiveRecord::Schema.define(version: 20150330213213) do
 
   create_table "tracks", force: true do |t|
     t.string   "name"
+    t.text     "description"
+    t.text     "application_link"
+    t.boolean  "enrollment_open"
     t.integer  "organization_id"
     t.datetime "created_at"
     t.datetime "updated_at"

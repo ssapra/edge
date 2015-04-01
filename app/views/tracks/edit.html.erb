@@ -1,0 +1,49 @@
+<h1>Editing Edge <%= @track.name %></h1>
+
+<%= simple_form_for(@track) do |f| %>
+  <%= f.error_notification %>
+  <%= f.hidden_field :id, value: @track.id %>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :application_link, "Application Link" %>
+    <%= f.text_field :application_link %>
+  </div>
+
+  <div class="field">
+    <%= f.label :enrollment_open, "Enrollment open?" %>
+    <%= f.check_box :enrollment_open %>
+  </div>
+
+  <%= f.simple_fields_for :courses, @track.courses do |q| %>
+    <div class="field">
+      <%= q.label :title, "Course title" %>
+      <%= q.text_field :title %>
+    </div>
+    <div class="field">
+      <%= q.input :description, label: "Course description" %>
+    </div>
+    <div class="field">
+      <%= q.input :details, label: "Course details" %>
+    </div>
+    <div class="field">
+      <%= q.label :instructor, "Course instructor" %>
+      <%= q.text_field :instructor %>
+    </div>
+
+    <div class="field">
+      <%= q.label :application_link, "Application Link" %>
+      <%= q.text_field :application_link %>
+    </div>
+
+    <div class="field">
+      <%= q.label :enrollment_open, "Enrollment_open?" %>
+      <%= q.check_box :enrollment_open %>
+    </div>
+  <% end %>
+  <%= f.button :submit %>
+<% end %>

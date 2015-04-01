@@ -8,6 +8,9 @@ Edge::Application.routes.draw do
     resources :events
   end
 
-  get '/:track_name' => 'tracks#show'
-  get '/:track_name/events' => 'events#index'
+  get '/:track_name' => 'tracks#show', as: :track
+  get '/:track_name/edit' => 'tracks#edit'
+  patch '/:track_name' => 'tracks#update'
+  # get '/:track_name/events' => 'events#index'
+
 end
