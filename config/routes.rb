@@ -4,6 +4,7 @@ Edge::Application.routes.draw do
 
   get '/auth' => 'auth#login'
   get "/team" => 'pages#team'
+  get '/contact' => 'pages#contact'
 
   namespace :admin do
     resources :events

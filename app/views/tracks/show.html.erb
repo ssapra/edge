@@ -3,7 +3,7 @@
 
 <% if @track.enrollment_open %>
   <p>Apply at <%= @track.application_link %></p>
-<% elsif ["Labs", "Venture"].include?(@track.name) %>
+<% elsif ["Labs", "Ventures"].include?(@track.name) %>
   <p>Applications are not open right now</p>
 <% end %>
 
