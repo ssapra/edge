@@ -3,6 +3,7 @@ Edge::Application.routes.draw do
   root to: 'pages#home'
 
   get '/auth' => 'auth#login'
+  get "/team" => 'pages#team'
 
   namespace :admin do
     resources :events
